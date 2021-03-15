@@ -38,3 +38,20 @@ while (totalEmpHours <= MAX_HOURS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_
 
 let empWage = calcDailyWage(totalEmpHours);
 console.log("Total working days  " + totalWorkingDays + "  Total Hours  " + totalEmpHours + "  Employee WAge  " + empWage);
+
+// UC 7A  calculate wage using array foreach loop
+
+let totalEmpWage = 0;
+
+function sum(dailyWage) {
+    totalEmpWage = dailyWage;
+}
+
+empDailyWageArr.forEach(sum);
+console.log("UC-7A  total Days " + totalWorkingDays + " total hours " + totalEmpHours + " Emp WAge " + totalEmpWage);
+
+function totalWages(totalWage, dailyWage) {
+    return totalWage + dailyWage;
+}
+
+console.log("UC-7A  Emp wage with Reduce: " + empDailyWageArr.reduce(totalWages, 0));
